@@ -16,6 +16,7 @@ app.use(cookieSession({
     maxAge: 14 * 24 * 60 * 60 * 1000
 }))
 
+
 //req.session
 
 app.get('/', (req, res) => { 
