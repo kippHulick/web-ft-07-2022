@@ -21,7 +21,6 @@ let users = [
     {username: 'Jose', password: '1122'} 
 ]
 
-
 app.get('/', (req, res) => { 
 
     res.render('index')
