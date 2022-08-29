@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models');
+const passport = require('passport');
 
 router.get('/login', (req,res) => {
 
@@ -9,16 +10,17 @@ router.get('/login', (req,res) => {
 })
 
 
-router.post('/login', async (req, res) => { 
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/', 
+    failureRedirect: '/login'
+}))
 
+router.get('/logout', (req,res) => { 
 
-    //scrape ifno from header 
-    // check if user is in db
-    // encrypt login password 
-    // compare the encrypted passwords with what is in db
-    // place the session on the login can persist
-    
+    req.logout()  //kills the auth session
+    res.redirect('/')
  })
+
 
 
 

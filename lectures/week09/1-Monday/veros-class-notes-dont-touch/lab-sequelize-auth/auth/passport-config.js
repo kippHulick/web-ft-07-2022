@@ -1,4 +1,4 @@
-const LocalStrategy = require('passport-local').Strategy;
+const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
 const db = require('../models')
 
@@ -50,5 +50,35 @@ const init = (passport) => {
             return done(error)
         }
     }))
+
+    //add the user info to the session 
+    // user is going to come from the record passed from the form
+    passport.serializeUser((user, done)=>{
+
+        done(null, user.id) // second argument is what goes on the session   session.id
+    })
+
+    // check if user is valide 
+    //grab session id from usr cookie 
+    // decode coode with secred
     
+    passport.deserializeUser(async (id, done)=>{
+
+        try{
+            let foundUserInDBFromSessionID = await db.users.findByPk(id); //return object {}  if found
+
+            if(foundUserInDBFromSessionID){
+                done(null, foundUserInDBFromSessionID)  //still authenticated
+            }
+            else{
+                done(null, false) // have to log back in
+            }
+        }
+        catch(error){
+            done(null, false)
+        }
+        
+    })
 }
+
+module.exports = init;
