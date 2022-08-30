@@ -28,6 +28,8 @@ const init = (passport) => {
 
                     if(match){
                         console.log('passwords matched');
+                        //req.session.username = "Yvonne"
+                        //req.session.id = 
                         return done(null, record)
                     }
                     else{
@@ -68,6 +70,8 @@ const init = (passport) => {
             let foundUserInDBFromSessionID = await db.users.findByPk(id); //return object {}  if found
 
             if(foundUserInDBFromSessionID){
+                //session 
+
                 done(null, foundUserInDBFromSessionID)  //still authenticated
             }
             else{
