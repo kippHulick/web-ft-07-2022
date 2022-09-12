@@ -47,8 +47,7 @@ After completing this lesson, you will be able to:
 
 <!-- ## 🔶Vocabulary
 
-
-🔷Test Your knowledge -->
+## 🔷Test Your knowledge -->
 
 
 ## Resources 
