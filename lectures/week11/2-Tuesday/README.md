@@ -1,4 +1,4 @@
-# Week 11 - Thursday
+# Week 11 - Tuesday
 
 ## React 102 - Stateful Components
 
