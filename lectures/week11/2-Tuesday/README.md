@@ -17,7 +17,7 @@ After completing this lesson, you will be able to:
 - [Thinking In React](https://reactjs.org/docs/thinking-in-react.html)
 
 
-## 🟡 Lecture Presentations
+<!-- ## 🟡 Lecture Presentations -->
 <!-- - [React 102](https://dc-houston.herokuapp.com/p2/React/React102.html#1) -->
 <!-- - [Styling React Components](https://dc-houston.herokuapp.com/p2/React/ReactStyling.html#1) -->
 <!-- - [Event Handling](https://dc-houston.herokuapp.com/p2/React/EventHandling.html#1) -->
