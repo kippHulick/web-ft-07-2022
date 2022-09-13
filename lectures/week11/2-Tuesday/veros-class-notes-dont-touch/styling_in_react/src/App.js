@@ -2,9 +2,16 @@ import React from 'react'
 import Welcome from './components/Welcome.js'
 import Navbar from './components/Navbar'
 
+import data from './data/books.js'
+import Books from './components/Books'
+
 const App = () => {
+
+  console.log(data);
   return (
     <>
+
+      <Books data={data} />
 
       <Navbar brandLink="Hello World" brandText="July 2022 Cohort" brandDescription="Learning React" />
       <div className="row">
