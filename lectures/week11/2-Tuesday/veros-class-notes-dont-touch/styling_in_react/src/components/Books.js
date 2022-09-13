@@ -2,16 +2,18 @@ import React from 'react'
 import Book from './Book'
 
 const Books = ({data}) => {
+
+    // [{}, {}, {}]
   return (
     <div className="row">
     
     
 
-        {data.map(book =>{
+        {data.map(bookObj =>{
             return <div className="col-3"> 
             
             
-                <Book book={book} />
+                <Book bookProp={bookObj} />
 
             </div>
         })}
