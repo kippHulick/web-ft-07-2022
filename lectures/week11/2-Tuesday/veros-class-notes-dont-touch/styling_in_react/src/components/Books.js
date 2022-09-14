@@ -4,6 +4,9 @@ import Book from './Book'
 const Books = ({data}) => {
 
     // [{}, {}, {}]
+    //          |
+
+    //ul li
   return (
     <div className="row">
     
