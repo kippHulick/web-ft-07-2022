@@ -14,7 +14,7 @@ const Movies = ({data}) => {  //[{},{}]
 
     let anchorTagID = e.target.id;
     // console.log("id of movie", anchorTagID);
-    let url = `https://www.omdbapi.com/?i=${anchorTagID}&apikey=2828d5e7`
+    let url = `https://www.omdbapi.com/?i=${anchorTagID}&apikey=d772336b`
     let results = await fetch(url)
 
     let detailData  = await results.json() 
