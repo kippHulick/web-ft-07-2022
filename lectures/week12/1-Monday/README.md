@@ -5,7 +5,7 @@
 ## 📍Learning Objectives
 After completing this lesson, you will be able to:
 
-- [ ] 
+<!-- - [ ]  -->
 
 ## ⭐️ Pre-Reading ⭐️
 
