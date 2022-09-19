@@ -3,11 +3,24 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import {v4 as uuidv4} from 'uuid'
 
-const AddProject = () => {
+const AddProject = ({addProjectProp}) => {
 
     const [category, setCategory] = useState('Front-End')
     const [title, setTitle] = useState("")
 
+
+    const handleSubmit = (e) => {
+        
+        e.preventDefault();
+
+        let newNewProject = {
+            id: uuidv4(), 
+            category, 
+            title
+        }
+
+        addProjectProp(newNewProject)
+    }
   return (
     <>
 
@@ -15,7 +28,7 @@ const AddProject = () => {
         <div className="row">
             <div className="col-8 offset-2">
 
-            <Form >
+            <Form onSubmit={handleSubmit}>
                 <Form.Select aria-label="Default select example" value={category}
                 onChange={e=>setCategory(e.target.value)}>
                     <option value="Font-End">Front End</option>

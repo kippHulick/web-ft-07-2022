@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Projects from './projectManagement/Projects'
+import AddProject from './projectManagement/AddProject'
 import {v4 as uuidv4} from 'uuid'
 
 const ProjectManagement = () => {
@@ -46,6 +47,12 @@ const ProjectManagement = () => {
     setProjects(filteredProjects)  //reseting our state with project removed
 
   }
+
+  const handleAddProject = (newProjectObj) => {
+
+    setProjects([newProjectObj, ...projects])
+    
+  }
   
   return (
 
@@ -54,6 +61,8 @@ const ProjectManagement = () => {
 
 
     <Projects projectsPropsArray={projects} deleteProject={id=>handleRemoveProject(id)} />
+
+    <AddProject addProjectProp={project=>handleAddProject(project)} />
 
 
     </>
